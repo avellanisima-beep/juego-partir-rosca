@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Rosca Virtual Configurable</title>
+<style>
+    :root {
+        --fondo: #fff6e5;
+        --boton: #f4c430;
+        --texto: #7a1f1f;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: var(--fondo);
+        text-align: center;
+        padding: 20px;
+        color: var(--texto);
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .config, .juego {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        background-color: var(--boton);
+        margin: 5px;
+    }
+
+    button:disabled {
+        background-color: #ccc;
+    }
+
+    .rosca {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    #mensaje {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #padrinos {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+
+<div id="scene">
+    <img id="fondo" src="assets/fondo_pixel.png">
+
+    <!-- Rosca -->
+    <div id="rosca"></div>
+
+    <!-- Mensaje -->
+    <div id="mensaje"></div>
+
+    <!-- Panel Config -->
+    <div id="panel">
+        <h2>Configuración</h2>
+
+        <label>🔢 Rebanadas</label>
+        <input type="number" id="rebanadas" value="12">
+
+        <label>👶 Niños Dios</label>
+        <input type="number" id="ninos" value="3">
+
+        <label>Invitados</label>
+        <textarea id="jugadores" rows="4"></textarea>
+		<button id="btnIniciar">🎉 INICIAR</button>
+    </div>
+    <div id="editor">
+    <h3>MENSAJE</h3>
+    <input type="text"
+           onchange="cambiarTexto('mensaje', this.value)">
+	</div>
+</div>
+
+<link rel="stylesheet" href="style.css">
+<script src="game.js"></script>
+<script src="sound.js"></script>
+<script src="ui-editor.js"></script>
+</body>
+</html>
