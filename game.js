@@ -113,3 +113,17 @@ function cortarRebanada(indice, slice) {
         }
     }
 }
+if (slice.tieneNino) {
+  function mostrarNino(nombreJugador) {
+    const modal = document.getElementById("modalNino");
+    const mensaje = document.getElementById("mensajeNino");
+
+    mensaje.textContent = `🎉 ${nombreJugador} será madrina / padrino del Niño Dios 🎉`;
+    modal.classList.remove("hidden");
+}
+
+function cerrarNino() {
+    document.getElementById("modalNino").classList.add("hidden");
+}
+
+}
