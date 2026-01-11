@@ -31,7 +31,7 @@ body {
 
 /* Rebanadas */
 .slice {
-    background-image: url("assets/slice_pixel.png");
+    background-image: url("slice_pixel.png");
     background-size: cover;
     image-rendering: pixelated;
     cursor: pointer;
