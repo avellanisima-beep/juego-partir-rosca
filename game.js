@@ -122,13 +122,3 @@ if (slice.tieneNino) {
     modal.classList.remove("hidden");
 }
 
-function cerrarNino() {
-    document.getElementById("modalNino").classList.add("hidden");
-}
-
-}
-mostrarNino(jugadorActual);
-if (slice.tieneNino) {
-    mostrarNino(jugadorActual);
-}
-
