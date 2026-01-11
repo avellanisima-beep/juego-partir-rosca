@@ -127,3 +127,8 @@ function cerrarNino() {
 }
 
 }
+mostrarNino(jugadorActual);
+if (slice.tieneNino) {
+    mostrarNino(jugadorActual);
+}
+
